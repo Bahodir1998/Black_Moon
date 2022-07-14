@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/fragment_home_scene2"
+    tools:context=".ui.home.HomeFragment">
+
+    <TextView
+        android:id="@+id/alifbo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="АЛИФБО БЎЙИЧА"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/hr_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="6dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/alifbo"
+        tools:listitem="@layout/hr_item" />
+
+    <TextView
+        android:id="@+id/harf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="A"
+        android:textColor="#309F8F"
+        android:textSize="32sp"
+        app:layout_constraintLeft_toLeftOf="@id/alifbo"
+        app:layout_constraintTop_toBottomOf="@id/hr_rv" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/v_rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/harf"
+        tools:listitem="@layout/v_item" />
+</androidx.constraintlayout.motion.widget.MotionLayout>
